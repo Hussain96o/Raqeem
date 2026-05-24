@@ -1,0 +1,42 @@
+{
+  "number": 108,
+  "name": {
+    "ar": "الكوثر",
+    "transliteration": "Al-Kawthar"
+  },
+  "revelation_place": {
+    "ar": "مكية"
+  },
+  "verses_count": 3,
+  "words_count": 10,
+  "letters_count": 42,
+  "verses": [
+    {
+      "number": 1,
+      "text": {
+        "ar": "إِنَّآ أَعۡطَيۡنَٰكَ ٱلۡكَوۡثَرَ"
+      },
+      "juz": 30,
+      "page": 602,
+      "sajda": false
+    },
+    {
+      "number": 2,
+      "text": {
+        "ar": "فَصَلِّ لِرَبِّكَ وَٱنۡحَرۡ"
+      },
+      "juz": 30,
+      "page": 602,
+      "sajda": false
+    },
+    {
+      "number": 3,
+      "text": {
+        "ar": "إِنَّ شَانِئَكَ هُوَ ٱلۡأَبۡتَرُ"
+      },
+      "juz": 30,
+      "page": 602,
+      "sajda": false
+    }
+  ]
+}

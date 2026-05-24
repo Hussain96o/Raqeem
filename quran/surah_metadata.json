@@ -1,0 +1,1484 @@
+[
+  {
+    "number": 1,
+    "name": {
+      "ar": "الفاتحة",
+      "en": "The Opening",
+      "transliteration": "Al-Fatihah"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 7
+  },
+  {
+    "number": 2,
+    "name": {
+      "ar": "البقرة",
+      "en": "The Cow",
+      "transliteration": "Al-Baqarah"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 286
+  },
+  {
+    "number": 3,
+    "name": {
+      "ar": "آل عمران",
+      "en": "The Family of Imraan",
+      "transliteration": "Ali 'Imran"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 200
+  },
+  {
+    "number": 4,
+    "name": {
+      "ar": "النساء",
+      "en": "The Women",
+      "transliteration": "An-Nisa"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 176
+  },
+  {
+    "number": 5,
+    "name": {
+      "ar": "المائدة",
+      "en": "The Table",
+      "transliteration": "Al-Ma'idah"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 120
+  },
+  {
+    "number": 6,
+    "name": {
+      "ar": "الأنعام",
+      "en": "The Cattle",
+      "transliteration": "Al-An'am"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 165
+  },
+  {
+    "number": 7,
+    "name": {
+      "ar": "الأعراف",
+      "en": "The Heights",
+      "transliteration": "Al-A'raf"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 206
+  },
+  {
+    "number": 8,
+    "name": {
+      "ar": "الأنفال",
+      "en": "The Spoils of War",
+      "transliteration": "Al-Anfal"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 75
+  },
+  {
+    "number": 9,
+    "name": {
+      "ar": "التوبة",
+      "en": "The Repentance",
+      "transliteration": "At-Tawbah"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 129
+  },
+  {
+    "number": 10,
+    "name": {
+      "ar": "يونس",
+      "en": "Jonas",
+      "transliteration": "Yunus"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 109
+  },
+  {
+    "number": 11,
+    "name": {
+      "ar": "هود",
+      "en": "Hud",
+      "transliteration": "Hud"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 123
+  },
+  {
+    "number": 12,
+    "name": {
+      "ar": "يوسف",
+      "en": "Joseph",
+      "transliteration": "Yusuf"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 111
+  },
+  {
+    "number": 13,
+    "name": {
+      "ar": "الرعد",
+      "en": "The Thunder",
+      "transliteration": "Ar-Ra'd"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 43
+  },
+  {
+    "number": 14,
+    "name": {
+      "ar": "إبراهيم",
+      "en": "Abraham",
+      "transliteration": "Ibrahim"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 52
+  },
+  {
+    "number": 15,
+    "name": {
+      "ar": "الحجر",
+      "en": "The Rock",
+      "transliteration": "Al-Hijr"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 99
+  },
+  {
+    "number": 16,
+    "name": {
+      "ar": "النحل",
+      "en": "The Bee",
+      "transliteration": "An-Nahl"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 128
+  },
+  {
+    "number": 17,
+    "name": {
+      "ar": "الإسراء",
+      "en": "The Night Journey",
+      "transliteration": "Al-Isra"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 111
+  },
+  {
+    "number": 18,
+    "name": {
+      "ar": "الكهف",
+      "en": "The Cave",
+      "transliteration": "Al-Kahf"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 110
+  },
+  {
+    "number": 19,
+    "name": {
+      "ar": "مريم",
+      "en": "Mary",
+      "transliteration": "Maryam"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 98
+  },
+  {
+    "number": 20,
+    "name": {
+      "ar": "طه",
+      "en": "Taahaa",
+      "transliteration": "Taha"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 135
+  },
+  {
+    "number": 21,
+    "name": {
+      "ar": "الأنبياء",
+      "en": "The Prophets",
+      "transliteration": "Al-Anbya"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 112
+  },
+  {
+    "number": 22,
+    "name": {
+      "ar": "الحج",
+      "en": "The Pilgrimage",
+      "transliteration": "Al-Hajj"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 78
+  },
+  {
+    "number": 23,
+    "name": {
+      "ar": "المؤمنون",
+      "en": "The Believers",
+      "transliteration": "Al-Mu'minun"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 118
+  },
+  {
+    "number": 24,
+    "name": {
+      "ar": "النور",
+      "en": "The Light",
+      "transliteration": "An-Nur"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 64
+  },
+  {
+    "number": 25,
+    "name": {
+      "ar": "الفرقان",
+      "en": "The Criterion",
+      "transliteration": "Al-Furqan"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 77
+  },
+  {
+    "number": 26,
+    "name": {
+      "ar": "الشعراء",
+      "en": "The Poets",
+      "transliteration": "Ash-Shu'ara"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 227
+  },
+  {
+    "number": 27,
+    "name": {
+      "ar": "النمل",
+      "en": "The Ant",
+      "transliteration": "An-Naml"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 93
+  },
+  {
+    "number": 28,
+    "name": {
+      "ar": "القصص",
+      "en": "The Stories",
+      "transliteration": "Al-Qasas"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 88
+  },
+  {
+    "number": 29,
+    "name": {
+      "ar": "العنكبوت",
+      "en": "The Spider",
+      "transliteration": "Al-'Ankabut"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 69
+  },
+  {
+    "number": 30,
+    "name": {
+      "ar": "الروم",
+      "en": "The Romans",
+      "transliteration": "Ar-Rum"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 60
+  },
+  {
+    "number": 31,
+    "name": {
+      "ar": "لقمان",
+      "en": "Luqman",
+      "transliteration": "Luqman"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 34
+  },
+  {
+    "number": 32,
+    "name": {
+      "ar": "السجدة",
+      "en": "The Prostration",
+      "transliteration": "As-Sajdah"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 30
+  },
+  {
+    "number": 33,
+    "name": {
+      "ar": "الأحزاب",
+      "en": "The Clans",
+      "transliteration": "Al-Ahzab"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 73
+  },
+  {
+    "number": 34,
+    "name": {
+      "ar": "سبأ",
+      "en": "Sheba",
+      "transliteration": "Saba"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 54
+  },
+  {
+    "number": 35,
+    "name": {
+      "ar": "فاطر",
+      "en": "The Originator",
+      "transliteration": "Fatir"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 45
+  },
+  {
+    "number": 36,
+    "name": {
+      "ar": "يس",
+      "en": "Yaseen",
+      "transliteration": "Ya-Sin"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 83
+  },
+  {
+    "number": 37,
+    "name": {
+      "ar": "الصافات",
+      "en": "Those drawn up in Ranks",
+      "transliteration": "As-Saffat"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 182
+  },
+  {
+    "number": 38,
+    "name": {
+      "ar": "ص",
+      "en": "The letter Saad",
+      "transliteration": "Sad"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 88
+  },
+  {
+    "number": 39,
+    "name": {
+      "ar": "الزمر",
+      "en": "The Groups",
+      "transliteration": "Az-Zumar"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 75
+  },
+  {
+    "number": 40,
+    "name": {
+      "ar": "غافر",
+      "en": "The Forgiver",
+      "transliteration": "Ghafir"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 85
+  },
+  {
+    "number": 41,
+    "name": {
+      "ar": "فصلت",
+      "en": "Explained in detail",
+      "transliteration": "Fussilat"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 54
+  },
+  {
+    "number": 42,
+    "name": {
+      "ar": "الشورى",
+      "en": "Consultation",
+      "transliteration": "Ash-Shuraa"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 53
+  },
+  {
+    "number": 43,
+    "name": {
+      "ar": "الزخرف",
+      "en": "Ornaments of gold",
+      "transliteration": "Az-Zukhruf"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 89
+  },
+  {
+    "number": 44,
+    "name": {
+      "ar": "الدخان",
+      "en": "The Smoke",
+      "transliteration": "Ad-Dukhan"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 59
+  },
+  {
+    "number": 45,
+    "name": {
+      "ar": "الجاثية",
+      "en": "Crouching",
+      "transliteration": "Al-Jathiyah"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 37
+  },
+  {
+    "number": 46,
+    "name": {
+      "ar": "الأحقاف",
+      "en": "The Dunes",
+      "transliteration": "Al-Ahqaf"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 35
+  },
+  {
+    "number": 47,
+    "name": {
+      "ar": "محمد",
+      "en": "Muhammad",
+      "transliteration": "Muhammad"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 38
+  },
+  {
+    "number": 48,
+    "name": {
+      "ar": "الفتح",
+      "en": "The Victory",
+      "transliteration": "Al-Fath"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 29
+  },
+  {
+    "number": 49,
+    "name": {
+      "ar": "الحجرات",
+      "en": "The Inner Apartments",
+      "transliteration": "Al-Hujurat"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 18
+  },
+  {
+    "number": 50,
+    "name": {
+      "ar": "ق",
+      "en": "The letter Qaaf",
+      "transliteration": "Qaf"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 45
+  },
+  {
+    "number": 51,
+    "name": {
+      "ar": "الذاريات",
+      "en": "The Winnowing Winds",
+      "transliteration": "Adh-Dhariyat"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 60
+  },
+  {
+    "number": 52,
+    "name": {
+      "ar": "الطور",
+      "en": "The Mount",
+      "transliteration": "At-Tur"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 49
+  },
+  {
+    "number": 53,
+    "name": {
+      "ar": "النجم",
+      "en": "The Star",
+      "transliteration": "An-Najm"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 62
+  },
+  {
+    "number": 54,
+    "name": {
+      "ar": "القمر",
+      "en": "The Moon",
+      "transliteration": "Al-Qamar"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 55
+  },
+  {
+    "number": 55,
+    "name": {
+      "ar": "الرحمن",
+      "en": "The Beneficent",
+      "transliteration": "Ar-Rahman"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 78
+  },
+  {
+    "number": 56,
+    "name": {
+      "ar": "الواقعة",
+      "en": "The Inevitable",
+      "transliteration": "Al-Waqi'ah"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 96
+  },
+  {
+    "number": 57,
+    "name": {
+      "ar": "الحديد",
+      "en": "The Iron",
+      "transliteration": "Al-Hadid"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 29
+  },
+  {
+    "number": 58,
+    "name": {
+      "ar": "المجادلة",
+      "en": "The Pleading Woman",
+      "transliteration": "Al-Mujadila"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 22
+  },
+  {
+    "number": 59,
+    "name": {
+      "ar": "الحشر",
+      "en": "The Exile",
+      "transliteration": "Al-Hashr"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 24
+  },
+  {
+    "number": 60,
+    "name": {
+      "ar": "الممتحنة",
+      "en": "She that is to be examined",
+      "transliteration": "Al-Mumtahanah"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 13
+  },
+  {
+    "number": 61,
+    "name": {
+      "ar": "الصف",
+      "en": "The Ranks",
+      "transliteration": "As-Saf"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 14
+  },
+  {
+    "number": 62,
+    "name": {
+      "ar": "الجمعة",
+      "en": "Friday",
+      "transliteration": "Al-Jumu'ah"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 11
+  },
+  {
+    "number": 63,
+    "name": {
+      "ar": "المنافقون",
+      "en": "The Hypocrites",
+      "transliteration": "Al-Munafiqun"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 11
+  },
+  {
+    "number": 64,
+    "name": {
+      "ar": "التغابن",
+      "en": "Mutual Disillusion",
+      "transliteration": "At-Taghabun"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 18
+  },
+  {
+    "number": 65,
+    "name": {
+      "ar": "الطلاق",
+      "en": "Divorce",
+      "transliteration": "At-Talaq"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 12
+  },
+  {
+    "number": 66,
+    "name": {
+      "ar": "التحريم",
+      "en": "The Prohibition",
+      "transliteration": "At-Tahrim"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 12
+  },
+  {
+    "number": 67,
+    "name": {
+      "ar": "الملك",
+      "en": "The Sovereignty",
+      "transliteration": "Al-Mulk"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 30
+  },
+  {
+    "number": 68,
+    "name": {
+      "ar": "القلم",
+      "en": "The Pen",
+      "transliteration": "Al-Qalam"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 52
+  },
+  {
+    "number": 69,
+    "name": {
+      "ar": "الحاقة",
+      "en": "The Reality",
+      "transliteration": "Al-Haqqah"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 52
+  },
+  {
+    "number": 70,
+    "name": {
+      "ar": "المعارج",
+      "en": "The Ascending Stairways",
+      "transliteration": "Al-Ma'arij"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 44
+  },
+  {
+    "number": 71,
+    "name": {
+      "ar": "نوح",
+      "en": "Nooh",
+      "transliteration": "Nuh"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 28
+  },
+  {
+    "number": 72,
+    "name": {
+      "ar": "الجن",
+      "en": "the Jinn",
+      "transliteration": "Al-Jinn"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 28
+  },
+  {
+    "number": 73,
+    "name": {
+      "ar": "المزمل",
+      "en": "The Enshrouded One",
+      "transliteration": "Al-Muzzammil"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 20
+  },
+  {
+    "number": 74,
+    "name": {
+      "ar": "المدثر",
+      "en": "The Cloaked One",
+      "transliteration": "Al-Muddaththir"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 56
+  },
+  {
+    "number": 75,
+    "name": {
+      "ar": "القيامة",
+      "en": "The Resurrection",
+      "transliteration": "Al-Qiyamah"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 40
+  },
+  {
+    "number": 76,
+    "name": {
+      "ar": "الإنسان",
+      "en": "Man",
+      "transliteration": "Al-Insan"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 31
+  },
+  {
+    "number": 77,
+    "name": {
+      "ar": "المرسلات",
+      "en": "The Emissaries",
+      "transliteration": "Al-Mursalat"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 50
+  },
+  {
+    "number": 78,
+    "name": {
+      "ar": "النبأ",
+      "en": "The Emissaries",
+      "transliteration": "An-Naba"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 40
+  },
+  {
+    "number": 79,
+    "name": {
+      "ar": "النازعات",
+      "en": "Those who drag forth",
+      "transliteration": "An-Nazi'at"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 46
+  },
+  {
+    "number": 80,
+    "name": {
+      "ar": "عبس",
+      "en": "He frowned",
+      "transliteration": "'Abasa"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 42
+  },
+  {
+    "number": 81,
+    "name": {
+      "ar": "التكوير",
+      "en": "The Overthrowing",
+      "transliteration": "At-Takwir"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 29
+  },
+  {
+    "number": 82,
+    "name": {
+      "ar": "الانفطار",
+      "en": "The Cleaving",
+      "transliteration": "Al-Infitar"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 19
+  },
+  {
+    "number": 83,
+    "name": {
+      "ar": "المطففين",
+      "en": "Defrauding",
+      "transliteration": "Al-Mutaffifin"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 36
+  },
+  {
+    "number": 84,
+    "name": {
+      "ar": "الانشقاق",
+      "en": "The Splitting Open",
+      "transliteration": "Al-Inshiqaq"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 25
+  },
+  {
+    "number": 85,
+    "name": {
+      "ar": "البروج",
+      "en": "The Constellations",
+      "transliteration": "Al-Buruj"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 22
+  },
+  {
+    "number": 86,
+    "name": {
+      "ar": "الطارق",
+      "en": "The Morning Star",
+      "transliteration": "At-Tariq"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 17
+  },
+  {
+    "number": 87,
+    "name": {
+      "ar": "الأعلى",
+      "en": "The Most High",
+      "transliteration": "Al-A'la"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 19
+  },
+  {
+    "number": 88,
+    "name": {
+      "ar": "الغاشية",
+      "en": "The Overwhelming",
+      "transliteration": "Al-Ghashiyah"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 26
+  },
+  {
+    "number": 89,
+    "name": {
+      "ar": "الفجر",
+      "en": "The Dawn",
+      "transliteration": "Al-Fajr"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 30
+  },
+  {
+    "number": 90,
+    "name": {
+      "ar": "البلد",
+      "en": "The City",
+      "transliteration": "Al-Balad"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 20
+  },
+  {
+    "number": 91,
+    "name": {
+      "ar": "الشمس",
+      "en": "The Sun",
+      "transliteration": "Ash-Shams"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 15
+  },
+  {
+    "number": 92,
+    "name": {
+      "ar": "الليل",
+      "en": "The Night",
+      "transliteration": "Al-Layl"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 21
+  },
+  {
+    "number": 93,
+    "name": {
+      "ar": "الضحى",
+      "en": "The Morning Hours",
+      "transliteration": "Ad-Duhaa"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 11
+  },
+  {
+    "number": 94,
+    "name": {
+      "ar": "الشرح",
+      "en": "The Consolation",
+      "transliteration": "Ash-Sharh"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 8
+  },
+  {
+    "number": 95,
+    "name": {
+      "ar": "التين",
+      "en": "The Fig",
+      "transliteration": "At-Tin"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 8
+  },
+  {
+    "number": 96,
+    "name": {
+      "ar": "العلق",
+      "en": "The Clot",
+      "transliteration": "Al-'Alaq"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 19
+  },
+  {
+    "number": 97,
+    "name": {
+      "ar": "القدر",
+      "en": "The Power, Fate",
+      "transliteration": "Al-Qadr"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 5
+  },
+  {
+    "number": 98,
+    "name": {
+      "ar": "البينة",
+      "en": "The Evidence",
+      "transliteration": "Al-Bayyinah"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 8
+  },
+  {
+    "number": 99,
+    "name": {
+      "ar": "الزلزلة",
+      "en": "The Earthquakee",
+      "transliteration": "Az-Zalzalah"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 8
+  },
+  {
+    "number": 100,
+    "name": {
+      "ar": "العاديات",
+      "en": "The Chargers",
+      "transliteration": "Al-'Adiyat"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 11
+  },
+  {
+    "number": 101,
+    "name": {
+      "ar": "القارعة",
+      "en": "The Calamity",
+      "transliteration": "Al-Qari'ah"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 11
+  },
+  {
+    "number": 102,
+    "name": {
+      "ar": "التكاثر",
+      "en": "Competition",
+      "transliteration": "At-Takathur"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 8
+  },
+  {
+    "number": 103,
+    "name": {
+      "ar": "العصر",
+      "en": "The Declining Day, Epoch",
+      "transliteration": "Al-'Asr"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 3
+  },
+  {
+    "number": 104,
+    "name": {
+      "ar": "الهمزة",
+      "en": "The Traducer",
+      "transliteration": "Al-Humazah"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 9
+  },
+  {
+    "number": 105,
+    "name": {
+      "ar": "الفيل",
+      "en": "The Elephant",
+      "transliteration": "Al-Fil"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 5
+  },
+  {
+    "number": 106,
+    "name": {
+      "ar": "قريش",
+      "en": "Quraysh",
+      "transliteration": "Quraysh"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 4
+  },
+  {
+    "number": 107,
+    "name": {
+      "ar": "الماعون",
+      "en": "Almsgiving",
+      "transliteration": "Al-Ma'un"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 7
+  },
+  {
+    "number": 108,
+    "name": {
+      "ar": "الكوثر",
+      "en": "Abundance",
+      "transliteration": "Al-Kawthar"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 3
+  },
+  {
+    "number": 109,
+    "name": {
+      "ar": "الكافرون",
+      "en": "The Disbelievers",
+      "transliteration": "Al-Kafirun"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 6
+  },
+  {
+    "number": 110,
+    "name": {
+      "ar": "النصر",
+      "en": "Divine Support",
+      "transliteration": "An-Nasr"
+    },
+    "revelation_place": {
+      "ar": "مدنية",
+      "en": "medinan"
+    },
+    "verses_count": 3
+  },
+  {
+    "number": 111,
+    "name": {
+      "ar": "المسد",
+      "en": "The Palm Fibre",
+      "transliteration": "Al-Masad"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 5
+  },
+  {
+    "number": 112,
+    "name": {
+      "ar": "الإخلاص",
+      "en": "Sincerity",
+      "transliteration": "Al-Ikhlas"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 4
+  },
+  {
+    "number": 113,
+    "name": {
+      "ar": "الفلق",
+      "en": "The Dawn",
+      "transliteration": "Al-Falaq"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 5
+  },
+  {
+    "number": 114,
+    "name": {
+      "ar": "الناس",
+      "en": "Mankind",
+      "transliteration": "An-Nas"
+    },
+    "revelation_place": {
+      "ar": "مكية",
+      "en": "meccan"
+    },
+    "verses_count": 6
+  }
+]

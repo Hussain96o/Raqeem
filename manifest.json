@@ -1,0 +1,42 @@
+{
+  "name": "رقيم - ختم  للقرآن الكريم",
+  "short_name": "رقيم",
+  "description": "تطبيق رقيم للختم السريع للقرآن الكريم بطريقة مبتكرة",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#07100a",
+  "theme_color": "#07100a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
