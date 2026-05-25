@@ -1,4 +1,4 @@
-const APP_VERSION = '1.0.0';
+const ='1.1.0';
 const CACHE_NAME = `quran-app-v${APP_VERSION}`;
 const ASSETS_TO_CACHE = [
   './',

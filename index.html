@@ -29,6 +29,15 @@
   --font-size-scale: 1;
 }
 
+.light-mode {
+  --bg:#f8f4ec; --card:#fffef9; --card2:#f0ead8; --card3:#e8e0ca;
+  --border:#d8cfb4; --bd2:#c4b88a;
+  --gold:#9a6f1e; --gold2:#7a5515; --gglow:rgba(154,111,30,.18);
+  --green:#1e6641; --gdim:#155233; --glow2:rgba(30,102,65,.12);
+  --text:#2a1f0e; --tdim:#5a4a30; --tmut:#9a8c72;
+  --red:#b83225; --blue:#1a6fa8;
+}
+
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;overflow:hidden}
 body{
@@ -51,7 +60,7 @@ body{
 #pickerScreen{
   background:var(--bg);
   background-image:
-    radial-gradient(ellipse 100% 50% at 50% 0%,rgba(61,139,95,.12) 0%,transparent 70%);
+    radial-gradient(ellipse 100% 50% at 50% 0%,var(--glow2) 0%,transparent 70%);
   z-index:10;
 }
 #pickerScreen.slide-out{transform:translateX(100%);opacity:0;pointer-events:none}
@@ -59,8 +68,8 @@ body{
 #readerScreen{
   background:var(--bg);
   background-image:
-    radial-gradient(ellipse 100% 50% at 50% 0%,rgba(61,139,95,.1) 0%,transparent 70%),
-    radial-gradient(ellipse 80% 40% at 50% 100%,rgba(212,168,67,.05) 0%,transparent 70%);
+    radial-gradient(ellipse 100% 50% at 50% 0%,var(--glow2) 0%,transparent 70%),
+    radial-gradient(ellipse 80% 40% at 50% 100%,var(--gglow) 0%,transparent 70%);
   z-index:9; transform:translateX(-30%); opacity:0; pointer-events:none;
 }
 #readerScreen.active{transform:translateX(0);opacity:1;pointer-events:all}
@@ -267,7 +276,7 @@ body{
 
 .verse-pill{
   display:inline-flex; align-items:center; gap:7px;
-  background:rgba(23,32,25,.8); border:1px solid var(--bd2);
+  background:var(--card2); border:1px solid var(--bd2);
   border-radius:50px; padding:5px 18px; font-size:.8rem; color:var(--gold);
   backdrop-filter:blur(6px); position:relative; z-index:6; transition:opacity .3s;
 }
@@ -292,6 +301,8 @@ body{
 
 body.focus-mode .verse-pill,
 body.focus-mode #wordSub{opacity:0;pointer-events:none}
+body.focus-mode .progress-wrap{opacity:0;pointer-events:none;transition:opacity .3s}
+.progress-wrap{transition:opacity .3s}
 
 .flash-r{animation:fR .25s ease}
 .flash-l{animation:fL .25s ease}
@@ -324,7 +335,8 @@ body.focus-mode #wordSub{opacity:0;pointer-events:none}
 .mushaf-verse{
   display:inline;
   transition:color .25s ease, opacity .25s ease, text-shadow .25s ease;
-  opacity:.5;
+  opacity:.45;
+  color:var(--tdim);
 }
 .mushaf-verse.active-verse{
   color:var(--gold);
@@ -344,8 +356,8 @@ body.focus-mode #wordSub{opacity:0;pointer-events:none}
   position:absolute;inset:0;z-index:7;pointer-events:none;display:none;
   background:linear-gradient(
     180deg,
-    var(--bg) 0%,rgba(7,16,10,0) 20%,
-    rgba(7,16,10,0) 80%,var(--bg) 100%
+    var(--bg) 0%,transparent 22%,
+    transparent 78%,var(--bg) 100%
   );
 }
 #scrollFade.active{display:block}
@@ -378,12 +390,16 @@ body.focus-mode #wordSub{opacity:0;pointer-events:none}
 
 /* bottom controls */
 .bottom-controls{
-  flex-shrink:0; background:rgba(11,20,13,.96);
+  flex-shrink:0; background:var(--card);
   border-top:1px solid var(--border); backdrop-filter:blur(10px);
-  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
-  display:flex; flex-direction:column; gap:10px; position:relative; z-index:10;
+  padding:8px 14px calc(8px + env(safe-area-inset-bottom,0px));
+  display:flex; flex-direction:column; gap:7px; position:relative; z-index:10;
 }
-.play-row{display:flex;align-items:center;justify-content:center;gap:12px;direction:ltr}
+body.focus-mode .bottom-controls{
+  transform:translateY(110%); opacity:0; pointer-events:none;
+  position:absolute; bottom:0; left:0; right:0;
+}
+.play-row{display:flex;align-items:center;justify-content:center;gap:10px;direction:ltr}
 
 .ctrl-btn{
   background:var(--card2); border:1px solid var(--border); color:var(--tdim);
@@ -391,23 +407,81 @@ body.focus-mode #wordSub{opacity:0;pointer-events:none}
   cursor:pointer; transition:all .12s; flex-shrink:0;
 }
 .ctrl-btn:active{transform:scale(.88);background:var(--bd2)}
-.ctrl-btn.sm{width:40px;height:40px;font-size:.9rem}
-.ctrl-btn.md{width:46px;height:46px;font-size:1rem}
+.ctrl-btn.sm{width:34px;height:34px;font-size:.8rem}
+.ctrl-btn.md{width:40px;height:40px;font-size:.9rem}
 
 #playBtn{
-  width:64px; height:64px; background:var(--gold); color:var(--bg);
-  border:none; border-radius:50%; font-size:1.6rem; cursor:pointer;
-  box-shadow:0 4px 24px var(--gglow);
+  width:54px; height:54px; background:var(--gold); color:var(--bg);
+  border:none; border-radius:50%; font-size:1.3rem; cursor:pointer;
+  box-shadow:0 3px 16px var(--gglow);
   display:flex; align-items:center; justify-content:center;
   transition:all .13s; flex-shrink:0;
 }
 #playBtn:active{transform:scale(.92)}
-#playBtn.playing{background:var(--card2);color:var(--gold);border:1.5px solid var(--gold);box-shadow:0 0 24px var(--gglow)}
+#playBtn.playing{background:var(--card2);color:var(--gold);border:1.5px solid var(--gold);box-shadow:0 0 18px var(--gglow)}
 
-.speed-row, .fsize-row{display:flex;align-items:center;gap:10px;padding:0 2px}
+.fsize-row{display:flex;align-items:center;gap:10px;padding:0 2px}
 .speed-lbl{font-size:.68rem;color:var(--tmut);white-space:nowrap}
 input[type=range]{flex:1;accent-color:var(--gold);height:4px;cursor:pointer}
 .speed-val{font-size:.75rem;color:var(--gold);min-width:36px;text-align:center}
+
+/* ── NEW speed selector ── */
+.speed-row{
+  display:flex; flex-direction:column; gap:6px; padding:0 2px;
+}
+.speed-row-header{
+  display:flex; align-items:center; justify-content:space-between;
+}
+.speed-row-lbl{font-size:.65rem;color:var(--tmut);}
+.speed-row-val{
+  font-size:.7rem; font-weight:700; color:var(--gold);
+  background:rgba(212,168,67,.1); border:1px solid rgba(212,168,67,.2);
+  border-radius:20px; padding:1px 9px;
+}
+.speed-chips{
+  display:flex; gap:4px;
+}
+.speed-chip{
+  flex:1; display:flex; flex-direction:column; align-items:center;
+  gap:1px; padding:5px 3px; border-radius:10px; cursor:pointer;
+  border:1.5px solid var(--border); background:var(--card2);
+  transition:all .15s; color:var(--tmut);
+}
+.speed-chip:active{transform:scale(.93)}
+.speed-chip.on{
+  background:rgba(212,168,67,.12); border-color:var(--gold);
+  color:var(--gold);
+}
+.speed-chip-icon{font-size:.78rem; line-height:1;}
+.speed-chip-name{font-size:.55rem; font-weight:600; white-space:nowrap;}
+.speed-chip-ms{font-size:.5rem; color:var(--tmut); opacity:.7;}
+.speed-chip.on .speed-chip-ms{color:var(--gold); opacity:.8;}
+
+/* fine-tune slider */
+.speed-fine{
+  display:flex; align-items:center; gap:7px; padding:0 2px;
+}
+.speed-fine-lbl{font-size:.6rem; color:var(--tmut); white-space:nowrap;}
+#speedSlider{flex:1; accent-color:var(--gold); cursor:pointer; height:3px;}
+
+/* ── Large screen layout ── */
+@media (min-width: 600px) {
+  .screen { max-width: 640px; margin: 0 auto; }
+  #readerScreen { border-left: 1px solid var(--border); border-right: 1px solid var(--border); }
+  #pickerScreen { border-left: 1px solid var(--border); border-right: 1px solid var(--border); }
+  .sheet { max-width: 640px; left: 50%; right: auto; transform: translateX(-50%) translateY(100%); width: 100%; }
+  .sheet.open { transform: translateX(-50%) translateY(0); }
+  .sheet-overlay { background: rgba(0,0,0,.5); }
+}
+
+/* focus mode: bottom controls slide away, display-area fills the gap */
+.bottom-controls{
+  transition:transform .32s cubic-bezier(.32,.72,0,1), opacity .32s;
+}
+body.focus-mode .bottom-controls{
+  transform:translateY(110%); opacity:0; pointer-events:none;
+  position:absolute; bottom:0; left:0; right:0;
+}
 
 /* smart speed info row */
 .smart-speed-row{
@@ -436,6 +510,7 @@ body.normal-mode .smart-speed-row{display:none}
 /* settings sheet */
 .sheet-overlay{display:none;position:fixed;inset:0;background:rgba(7,16,10,.6);backdrop-filter:blur(4px);z-index:50}
 .sheet-overlay.open{display:block}
+.light-mode .sheet-overlay{background:rgba(42,31,14,.35)}
 .sheet{
   position:fixed; bottom:0; left:0; right:0;
   background:var(--card); border-top:1px solid var(--bd2); border-radius:24px 24px 0 0;
@@ -445,10 +520,46 @@ body.normal-mode .smart-speed-row{display:none}
   max-height:88dvh; overflow-y:auto;
 }
 .sheet.open{transform:translateY(0)}
-.sheet-handle{width:36px;height:4px;background:var(--bd2);border-radius:2px;margin:0 auto 16px}
-.sheet-title{font-size:.85rem;color:var(--tdim);margin-bottom:16px;text-align:center;letter-spacing:.04em}
-.sheet-section{margin-bottom:20px}
-.sheet-label{font-size:.7rem;color:var(--tmut);margin-bottom:8px;padding-right:2px}
+.sheet-handle{width:40px;height:4px;background:var(--bd2);border-radius:2px;margin:0 auto 14px}
+.sheet-title{
+  font-size:.95rem; font-weight:700; color:var(--text);
+  margin-bottom:18px; text-align:center;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+}
+.sheet-title::before,.sheet-title::after{
+  content:''; flex:1; height:1px; background:var(--border);
+}
+
+/* section grouping cards */
+.sheet-group{
+  background:var(--card2); border:1px solid var(--border);
+  border-radius:18px; overflow:hidden; margin-bottom:12px;
+}
+.sheet-group-item{
+  padding:13px 16px; display:flex; flex-direction:column; gap:8px;
+  border-bottom:1px solid var(--border);
+}
+.sheet-group-item:last-child{border-bottom:none}
+.sheet-group-item-row{
+  display:flex; align-items:center; gap:12px;
+}
+.sheet-group-icon{
+  width:32px; height:32px; border-radius:10px;
+  background:var(--card3); border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center;
+  font-size:.9rem; flex-shrink:0;
+}
+
+.sheet-section{margin-bottom:12px}
+.sheet-label{
+  font-size:.72rem; font-weight:600; color:var(--tdim);
+  margin-bottom:8px; padding-right:2px;
+  display:flex; align-items:center; gap:6px;
+}
+.sheet-label::before{
+  content:''; width:3px; height:12px; background:var(--gold);
+  border-radius:2px; display:inline-block;
+}
 
 .tgl-group{display:flex;background:var(--card2);border-radius:12px;padding:3px;gap:3px}
 .tgl{flex:1;padding:10px 6px;border:none;border-radius:10px;background:transparent;color:var(--tmut);font-size:.82rem;cursor:pointer;transition:all .15s}
@@ -577,10 +688,13 @@ body.normal-mode .smart-speed-row{display:none}
           <span>اختر سورة للبدء</span>
         </div>
       </div>
-      <!-- Smart / Normal toggle -->
-      <div class="mode-pill" id="modePill">
-        <button id="modeSmartBtn" class="on">🧠 ذكي</button>
-        <button id="modeNormalBtn">⚡ عادي</button>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <button class="topbar-btn" id="mainSettingsBtn" onclick="openSheet()" style="width:40px; height:40px; border-radius:12px;">⚙️</button>
+        <!-- Smart / Normal toggle -->
+        <div class="mode-pill" id="modePill">
+          <button id="modeSmartBtn" class="on">🧠 ذكي</button>
+          <button id="modeNormalBtn">⚡ عادي</button>
+        </div>
       </div>
     </div>
     <!-- Search -->
@@ -626,7 +740,7 @@ body.normal-mode .smart-speed-row{display:none}
       <span id="smartBadgeText">ذكي</span>
     </div>
     <button class="topbar-btn" id="focusBtn">👁</button>
-    <button class="topbar-btn" id="settingsBtn">⚙</button>
+    <button class="topbar-btn" id="settingsBtn" onclick="openSheet()">⚙</button>
   </div>
 
   <!-- Display -->
@@ -667,14 +781,21 @@ body.normal-mode .smart-speed-row{display:none}
       <button class="ctrl-btn sm" id="prevVerseBtn" title="الآية السابقة">⏭</button>
     </div>
     <div class="speed-row" id="speedRow">
-      <span class="speed-lbl">السرعة:</span>
-      <div class="tgl-group" id="speedTglGroup" style="flex:1; margin:0 8px;">
-        <button class="tgl" id="spdSlow" data-speed="1200">🐢 بطيء</button>
-        <button class="tgl" id="spdMedium" data-speed="800">📖 متوسط</button>
-        <button class="tgl" id="spdFast" data-speed="500">⚡ سريع</button>
-        <button class="tgl" id="spdVFast" data-speed="300">🚀 سريع جداً</button>
+      <div class="speed-row-header">
+        <span class="speed-row-lbl">السرعة</span>
+        <span class="speed-row-val" id="speedVal">—</span>
       </div>
-      <span class="speed-val" id="speedVal">—</span>
+      <div class="speed-chips" id="speedTglGroup">
+        <button class="speed-chip" id="spdSlow"   data-speed="1500"><span class="speed-chip-icon">🐢</span><span class="speed-chip-name">هادئ</span><span class="speed-chip-ms">١.٥ث</span></button>
+        <button class="speed-chip" id="spdMedium" data-speed="900" ><span class="speed-chip-icon">📖</span><span class="speed-chip-name">عادي</span><span class="speed-chip-ms">٠.٩ث</span></button>
+        <button class="speed-chip" id="spdFast"   data-speed="450" ><span class="speed-chip-icon">⚡</span><span class="speed-chip-name">سريع</span><span class="speed-chip-ms">٠.٤ث</span></button>
+        <button class="speed-chip" id="spdVFast"  data-speed="200" ><span class="speed-chip-icon">🚀</span><span class="speed-chip-name">أسرع</span><span class="speed-chip-ms">٠.٢ث</span></button>
+        <button class="speed-chip" id="spdUltra"  data-speed="100" ><span class="speed-chip-icon">💨</span><span class="speed-chip-name">فائق</span><span class="speed-chip-ms">٠.١ث</span></button>
+      </div>
+      <div class="speed-fine">
+        <span class="speed-fine-lbl">ضبط دقيق</span>
+        <input type="range" id="speedSlider" min="80" max="2000" step="10" value="900" style="direction:ltr">
+      </div>
     </div>
     <div class="smart-speed-row" id="smartSpeedRow">
       <div class="smart-speed-meta" id="smartSpeedMeta">
@@ -688,99 +809,134 @@ body.normal-mode .smart-speed-row{display:none}
     </div>
   </div>
 
+</div><!-- /readerScreen -->
+
+<!-- ══════════════════════════════════════
+     GLOBAL OVERLAYS (outside screens so opacity:0 on readerScreen doesn't hide them)
+══════════════════════════════════════ -->
+
   <!-- Settings sheet -->
   <div class="sheet-overlay" id="sheetOverlay"></div>
   <div class="sheet" id="settingsSheet">
     <div class="sheet-handle"></div>
-    <div class="sheet-title">إعدادات القراءة</div>
-    <div class="sheet-section">
-      <div class="sheet-label">وضع العرض</div>
-      <div class="tgl-group">
-        <button class="tgl on" id="modeWord">كلمة بكلمة</button>
-        <button class="tgl"    id="modeVerse">آية كاملة</button>
+    <div class="sheet-title">⚙ إعدادات القراءة</div>
+
+    <!-- Group 1: Display & Theme -->
+    <div class="sheet-group">
+      <div class="sheet-group-item">
+        <div class="sheet-label">وضع العرض</div>
+        <div class="tgl-group">
+          <button class="tgl on" id="modeWord">📝 كلمة بكلمة</button>
+          <button class="tgl"    id="modeVerse">📜 آية كاملة</button>
+        </div>
+      </div>
+      <div class="sheet-group-item">
+        <div class="sheet-label">المظهر</div>
+        <div class="tgl-group">
+          <button class="tgl on" id="themeDark">🌙 ليلي</button>
+          <button class="tgl"    id="themeLight">☀️ نهاري</button>
+        </div>
       </div>
     </div>
-    <div class="sheet-section">
-      <div class="sheet-label">حجم الخط</div>
-      <div class="fsize-row">
-        <span class="speed-lbl" style="font-size:0.6rem">صغير</span>
-        <input type="range" id="fontSizeRange" min="0.5" max="2" value="1" step="0.1" style="direction:rtl">
-        <span class="speed-val" id="fontSizeVal">100%</span>
-        <span class="speed-lbl" style="font-size:0.9rem">كبير</span>
+
+    <!-- Group 2: Font settings -->
+    <div class="sheet-group">
+      <div class="sheet-group-item">
+        <div class="sheet-label">نوع الخط</div>
+        <div class="tgl-group">
+          <button class="tgl on" id="fontU">عثماني حفص</button>
+          <button class="tgl"    id="fontM">خط المدينة</button>
+        </div>
+      </div>
+      <div class="sheet-group-item">
+        <div class="sheet-label">حجم الخط</div>
+        <div class="fsize-row">
+          <span class="speed-lbl" style="font-size:0.65rem">أ</span>
+          <input type="range" id="fontSizeRange" min="0.5" max="2" value="1" step="0.1" style="direction:rtl">
+          <span class="speed-val" id="fontSizeVal">100%</span>
+          <span class="speed-lbl" style="font-size:1rem">أ</span>
+        </div>
       </div>
     </div>
-    <div class="sheet-section">
-      <div class="sheet-label">الخط</div>
-      <div class="tgl-group">
-        <button class="tgl on" id="fontU">عثماني</button>
-        <button class="tgl"    id="fontM">المدينة</button>
+
+    <!-- Group 3: Navigation -->
+    <div class="sheet-group">
+      <div class="sheet-group-item">
+        <div class="sheet-label">الانتقال إلى آية</div>
+        <div class="jump-row">
+          <input class="jump-input" type="number" id="jumpInput" min="1" placeholder="رقم الآية">
+          <button class="jump-go" id="jumpBtn">انتقال ←</button>
+        </div>
       </div>
     </div>
-    <div class="sheet-section">
-      <div class="sheet-label">الانتقال إلى آية</div>
-      <div class="jump-row">
-        <input class="jump-input" type="number" id="jumpInput" min="1" placeholder="رقم الآية">
-        <button class="jump-go" id="jumpBtn">انتقال</button>
+
+    <!-- Group 4: Speed calibration -->
+    <div class="sheet-group">
+      <div class="sheet-group-item">
+        <div class="sheet-label">معايرة السرعة الذكية</div>
+        <button class="calib-btn" id="calibTriggerBtn"><span>🎯</span> معايرة السرعة حسب قراءتي</button>
       </div>
     </div>
-    <div class="sheet-section">
-      <button class="calib-btn" id="calibTriggerBtn"><span>🎯</span> معايرة السرعة حسب قراءتي</button>
-    </div>
-    <div class="sheet-section">
-      <div class="sheet-label">الاستخدام بدون إنترنت</div>
-      <button class="calib-btn" id="downloadAllBtn" style="border-style:solid;background:rgba(61,139,95,0.1);border-color:var(--green);color:var(--text)">
-        <span>📥</span> تحميل كافة السور للأوفلاين
-      </button>
-      <div id="downloadStatus" style="font-size:0.7rem;color:var(--tmut);margin-top:8px;text-align:center;display:none">
-        جاري التحميل: <span id="dlProgress">٠</span>/١١٤
+
+    <!-- Group 5: Offline -->
+    <div class="sheet-group">
+      <div class="sheet-group-item">
+        <div class="sheet-label">استخدام بدون إنترنت</div>
+        <button class="calib-btn" id="downloadAllBtn" style="border-style:solid;background:rgba(61,139,95,0.08);border-color:var(--green);color:var(--text)">
+          <span>📥</span> تحميل كافة السور للأوفلاين
+        </button>
+        <div id="downloadStatus" style="font-size:0.7rem;color:var(--tmut);margin-top:6px;text-align:center;display:none">
+          جاري التحميل: <span id="dlProgress">٠</span>/١١٤
+        </div>
       </div>
     </div>
 
     <!-- PWA Install Nudge -->
-    <div class="sheet-section" id="installBar" style="display:none; background: linear-gradient(135deg, rgba(61,139,95,0.1), rgba(212,168,67,0.1)); border: 1px solid var(--bd2); border-radius: 16px; padding: 14px; margin-top: 10px;">
-      <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
-        <div style="width:40px; height:40px; border-radius:10px; background:var(--gold); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">📲</div>
-        <div style="flex:1; text-align:right;">
-          <div style="font-size:0.85rem; font-weight:700; color:var(--text);">تثبيت تطبيق رقيم</div>
-          <div style="font-size:0.7rem; color:var(--tdim); margin-top:2px; line-height: 1.4;">وصول سريع ومباشر للقرآن الكريم من شاشتك الرئيسية، مع دعم كامل للعمل بدون إنترنت.</div>
+    <div class="sheet-group" id="installBar" style="display:none;">
+      <div class="sheet-group-item" style="flex-direction:row;align-items:center;gap:12px;">
+        <div style="width:38px;height:38px;border-radius:12px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">📲</div>
+        <div style="flex:1;text-align:right;">
+          <div style="font-size:.85rem;font-weight:700;color:var(--text);">تثبيت تطبيق رقيم</div>
+          <div style="font-size:.7rem;color:var(--tdim);margin-top:2px;line-height:1.4;">وصول سريع من شاشتك الرئيسية، مع دعم كامل للأوفلاين.</div>
         </div>
       </div>
-      <button class="calib-btn" id="installBtn" style="background:var(--gold); color:var(--bg); border:none; font-weight:700; width:100%; transition: all 0.2s;">تثبيت التطبيق</button>
+      <div class="sheet-group-item">
+        <button class="calib-btn" id="installBtn" style="background:var(--gold);color:var(--bg);border:none;font-weight:700;width:100%;">تثبيت التطبيق</button>
+      </div>
     </div>
 
     <!-- Developer & Source Code Info -->
-    <div class="sheet-section" style="margin-top:20px; border-top:1px solid var(--border); padding-top:16px; text-align:center;">
-      <div class="sheet-label" style="text-align:center; margin-bottom:12px;">حول المطور والتطبيق</div>
-      <div style="display:flex; justify-content:center; gap:8px; flex-wrap:wrap;">
-        <a href="https://github.com/Hussain96o/Raqeem" target="_blank" class="calib-btn" style="text-decoration:none; display:inline-flex; width:auto; padding:8px 16px; background:var(--card2); border:1px solid var(--border); font-size:0.8rem; color:var(--tdim); border-radius:10px; gap:8px; transition: all 0.2s;">
-          <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-          <span>سورس كود التطبيق</span>
+    <div class="sheet-group" style="margin-top:4px;">
+      <div class="sheet-group-item" style="flex-direction:row; gap:8px; flex-wrap:wrap;">
+        <div class="sheet-label" style="width:100%; margin-bottom:4px;">حول التطبيق</div>
+        <a href="https://github.com/Hussain96o/Raqeem" target="_blank" class="calib-btn" style="text-decoration:none;display:inline-flex;flex:1;min-width:120px;padding:10px 12px;background:var(--card3);border:1px solid var(--border);font-size:0.8rem;color:var(--tdim);border-radius:12px;gap:8px;justify-content:center;">
+          <svg style="width:15px;height:15px;fill:currentColor;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          <span>سورس كود</span>
         </a>
-        <a href="https://t.me/Raqeemapp" target="_blank" class="calib-btn" style="text-decoration:none; display:inline-flex; width:auto; padding:8px 16px; background:var(--card2); border:1px solid var(--border); font-size:0.8rem; color:var(--tdim); border-radius:10px; gap:8px; transition: all 0.2s;">
-          <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.35-.99.53-1.41.52-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.88.03-.24.38-.49 1.04-.75 4.06-1.77 6.76-2.93 8.11-3.48 3.84-1.56 4.63-1.83 5.16-1.84.12 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.13-.03.19z"/>
-          </svg>
+        <a href="https://t.me/Raqeemapp" target="_blank" class="calib-btn" style="text-decoration:none;display:inline-flex;flex:1;min-width:120px;padding:10px 12px;background:var(--card3);border:1px solid var(--border);font-size:0.8rem;color:var(--tdim);border-radius:12px;gap:8px;justify-content:center;">
+          <svg style="width:15px;height:15px;fill:currentColor;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.35-.99.53-1.41.52-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.88.03-.24.38-.49 1.04-.75 4.06-1.77 6.76-2.93 8.11-3.48 3.84-1.56 4.63-1.83 5.16-1.84.12 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.13-.03.19z"/></svg>
           <span>قناة التليجرام</span>
-        </a>      </div>
+        </a>
+      </div>
     </div>
 
     <!-- Changelog Section -->
-    <div class="sheet-section" style="margin-top: 20px; border-top: 1px solid var(--border); padding-top: 16px;">
-      <details class="changelog-details" style="border: 1px solid var(--bd2); border-radius: 14px; background: var(--card3); overflow: hidden;">
-        <summary style="padding: 12px 14px; font-size: 0.85rem; font-weight: 600; color: var(--gold); cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between; list-style: none; direction: rtl;">
-          <span>📋 سجل التغييرات والتحديثات</span>
-          <span class="chevron" style="font-size: 0.7rem; color: var(--tmut); transition: transform 0.2s;">▼</span>
-        </summary>
-        <div id="changelogContent" style="padding: 14px; max-height: 220px; overflow-y: auto; font-size: 0.8rem; line-height: 1.6; border-top: 1px solid var(--border); text-align: right; background: var(--card2);">
-          جاري تحميل التحديثات...
-        </div>
-      </details>
+    <div class="sheet-group" style="margin-top:4px;">
+      <div class="sheet-group-item" style="padding:0;">
+        <details class="changelog-details" style="width:100%;">
+          <summary style="padding:13px 16px;font-size:.85rem;font-weight:600;color:var(--gold);cursor:pointer;user-select:none;display:flex;align-items:center;justify-content:space-between;list-style:none;direction:rtl;">
+            <span>📋 سجل التغييرات</span>
+            <span class="chevron" style="font-size:.7rem;color:var(--tmut);transition:transform .2s;">▼</span>
+          </summary>
+          <div id="changelogContent" style="padding:14px;max-height:220px;overflow-y:auto;font-size:.8rem;line-height:1.6;border-top:1px solid var(--border);text-align:right;background:var(--card2);">
+            جاري تحميل التحديثات...
+          </div>
+        </details>
+      </div>
     </div>
 
-    <div style="text-align:center;margin-top:30px;opacity:0.3;font-size:0.7rem">
-      إصدار التطبيق <span id="versionSettings">v1.0.0</span>
+    <div style="text-align:center;margin-top:20px;margin-bottom:4px;opacity:0.4;font-size:0.7rem;color:var(--tdim);">
+      رقيم · إصدار <span id="versionSettings">v1.0.0</span>
     </div>
   </div>
 
@@ -842,8 +998,6 @@ body.normal-mode .smart-speed-row{display:none}
     </div>
   </div>
 
-</div><!-- /readerScreen -->
-
 <script>
 // ════════════════════════════════════════
 //  ARABIC FORMATTING & SEARCH HELPERS
@@ -876,16 +1030,21 @@ function highlightActiveVerse(vi) {
 }
 
 function updateSpeedButtonsUI() {
-  const btns = document.querySelectorAll('#speedTglGroup .tgl');
+  const btns = document.querySelectorAll('#speedTglGroup .speed-chip');
+  let closest = null, minDiff = Infinity;
   btns.forEach(btn => {
     const sp = parseInt(btn.dataset.speed);
-    if (Math.abs(speed - sp) < 150) {
-      btn.classList.add('on');
-    } else {
-      btn.classList.remove('on');
-    }
+    const diff = Math.abs(speed - sp);
+    if (diff < minDiff) { minDiff = diff; closest = btn; }
+    btn.classList.remove('on');
   });
-  speedVal.textContent = toArabicDigits((speed / 1000).toFixed(1)) + 'ث';
+  // Only highlight preset if within 30% of its value
+  if (closest && minDiff < parseInt(closest.dataset.speed) * 0.3) {
+    closest.classList.add('on');
+  }
+  const slider = document.getElementById('speedSlider');
+  if (slider) slider.value = speed;
+  speedVal.textContent = toArabicDigits((speed / 1000).toFixed(2)).replace(/\.?٠+$/, '') + 'ث';
 }
 
 function syncTimelineToScrollTop() {
@@ -923,7 +1082,7 @@ const ST = {
   set(k,v){ try{localStorage.setItem(k,JSON.stringify(v))}catch{} },
 };
 
-const APP_VERSION = '1.0.0';
+const APP_VERSION = '1.1.0';
 document.getElementById('versionPicker').textContent = `v${APP_VERSION}`;
 document.getElementById('versionSettings').textContent = `v${APP_VERSION}`;
 
@@ -936,6 +1095,37 @@ const KEY_PROG    = 'khatm_prog';      // {surahId: wordIdx}
 const KEY_DMODE   = 'khatm_dmode';     // 'word'|'verse'
 const KEY_FONT    = 'khatm_font';      // 'uthmani'|'madina'
 const KEY_FSIZE   = 'khatm_fsize';     // font size scale (0.5 to 2.0)
+const KEY_THEME   = 'khatm_theme';     // 'dark'|'light'
+
+let theme = ST.get(KEY_THEME) || 'dark';
+if (theme === 'light') document.body.classList.add('light-mode');
+
+function updateThemeUI() {
+  const tDark = document.getElementById('themeDark');
+  const tLight = document.getElementById('themeLight');
+  if (tDark) tDark.classList.toggle('on', theme === 'dark');
+  if (tLight) tLight.classList.toggle('on', theme === 'light');
+  document.body.classList.toggle('light-mode', theme === 'light');
+  
+  const metaTheme = document.querySelector('meta[name="theme-color"]');
+  if (metaTheme) metaTheme.setAttribute('content', theme === 'light' ? '#fdfbf7' : '#07100a');
+}
+
+if (document.getElementById('themeDark')) {
+  document.getElementById('themeDark').addEventListener('click', () => {
+    theme = 'dark';
+    ST.set(KEY_THEME, theme);
+    updateThemeUI();
+  });
+}
+if (document.getElementById('themeLight')) {
+  document.getElementById('themeLight').addEventListener('click', () => {
+    theme = 'light';
+    ST.set(KEY_THEME, theme);
+    updateThemeUI();
+  });
+}
+updateThemeUI();
 
 // ════════════════════════════════════════
 //  STATE
@@ -947,7 +1137,7 @@ let currentIdx = 0, isPlaying = false;
 let displayMode = ST.get(KEY_DMODE) || 'word';
 let smartMode   = (ST.get(KEY_MODE) ?? 'smart') === 'smart';
 let calibSpeed  = ST.get(KEY_SPEED) || null; // null = not calibrated
-let normalSpeed = ST.get(KEY_NSPEED) || 800; // Default to comfortable Medium (800ms)
+let normalSpeed = ST.get(KEY_NSPEED) || 900; // Default to comfortable Medium (900ms)
 let speed       = smartMode && calibSpeed ? calibSpeed : normalSpeed;
 let fontSizeScale = ST.get(KEY_FSIZE) || 1;
 let intervalId  = null;
@@ -1686,8 +1876,13 @@ scrollAreaEl.addEventListener('touchstart', () => {
 // ════════════════════════════════════════
 function openSheet(){settingsSheet.classList.add('open');sheetOverlay.classList.add('open');}
 function closeSheet(){settingsSheet.classList.remove('open');sheetOverlay.classList.remove('open');}
-document.getElementById('settingsBtn').addEventListener('click', openSheet);
-sheetOverlay.addEventListener('click', closeSheet);
+
+[ 'settingsBtn', 'mainSettingsBtn' ].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', openSheet);
+});
+
+if (sheetOverlay) sheetOverlay.addEventListener('click', closeSheet);
 
 // Focus mode
 document.getElementById('focusBtn').addEventListener('click',()=>{
@@ -1703,17 +1898,15 @@ document.getElementById('prevVerseBtn').addEventListener('click', prevVerse);
 document.getElementById('nextVerseBtn').addEventListener('click', nextVerse);
 
 speedTglGroup.addEventListener('click', e => {
-  const btn = e.target.closest('.tgl');
+  const btn = e.target.closest('.speed-chip');
   if (!btn) return;
 
   const sp = parseInt(btn.dataset.speed);
   speed = sp;
   normalSpeed = sp;
-  ST.set(KEY_NSPEED, sp); // Save normal speed preference
+  ST.set(KEY_NSPEED, sp);
 
-  // Update active UI
-  document.querySelectorAll('#speedTglGroup .tgl').forEach(b => b.classList.toggle('on', b === btn));
-  speedVal.textContent = toArabicDigits((sp / 1000).toFixed(1)) + 'ث';
+  updateSpeedButtonsUI();
 
   if (displayMode === 'verse') {
     const wasPlaying = isPlaying;
@@ -1729,6 +1922,27 @@ speedTglGroup.addEventListener('click', e => {
   }
   updateStats();
 });
+
+// Fine-tune slider
+const speedSlider = document.getElementById('speedSlider');
+if (speedSlider) {
+  speedSlider.addEventListener('input', () => {
+    speed = parseInt(speedSlider.value);
+    normalSpeed = speed;
+    ST.set(KEY_NSPEED, speed);
+    updateSpeedButtonsUI();
+    if (displayMode === 'verse') {
+      const wasPlaying = isPlaying;
+      if (wasPlaying) stopScrollPlay();
+      computeScrollTiming();
+      syncTimelineToScrollTop();
+      if (wasPlaying) startScrollPlay();
+    } else {
+      if (isPlaying) { clearTimeout(intervalId); startPlay(); }
+    }
+    updateStats();
+  });
+}
 
 // Display mode
 const modeWordBtn=document.getElementById('modeWord'), modeVerseBtn=document.getElementById('modeVerse');
@@ -1995,4 +2209,4 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 </body>
-</html>tml>
+</html>
